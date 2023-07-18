@@ -1,5 +1,6 @@
 package cat.itacademy.barcelonactiva.Magester.Jordi.s05.t01.n02.Dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.util.Arrays;
@@ -18,10 +19,13 @@ public class FlowerDto {
             "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
             "Netherlands", "Poland", "Portugal", "Czech Republic", "Romania", "Sweden");
 
+    @Schema(name="Flower id", example = "3")
     private Integer pk_ID;
 
+    @Schema(name="Flower name", example = "Amapola")
     private String name;
 
+    @Schema(name="Flower country of procedence", example = "Spain")
     private String country;
 
     private String type;
