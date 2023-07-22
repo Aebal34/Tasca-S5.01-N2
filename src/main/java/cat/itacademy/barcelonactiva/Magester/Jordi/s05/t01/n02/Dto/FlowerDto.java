@@ -1,5 +1,6 @@
 package cat.itacademy.barcelonactiva.Magester.Jordi.s05.t01.n02.Dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class FlowerDto {
 
+    @JsonIgnore
     private List<String> euCountries = Arrays.asList(
             "Germany", "Austria", "Belgium", "Bulgaria", "Cyprus", "Croatia", "Denmark",
             "Slovakia", "Slovenia", "Spain", "Estonia", "Finland", "France", "Greece",

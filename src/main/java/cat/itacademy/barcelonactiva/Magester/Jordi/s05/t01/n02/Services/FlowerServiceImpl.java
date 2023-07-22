@@ -56,13 +56,13 @@ public class FlowerServiceImpl implements IFlowerService{
     @Override
     public ResponseEntity<String> delete(Integer pk_ID) {
 
-        Flower flower = flowerRepository.findById(pk_ID).orElse(null);
-        if(flower != null){
+       // Flower flower = flowerRepository.findById(pk_ID).orElse(null);
+        //if(flower != null){
             flowerRepository.deleteById(pk_ID);
             return ResponseEntity.ok("200. Entity removed successfully.");
-        }else{
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("404. Entity not found");
-        }
+       // }else{
+       //     return ResponseEntity.status(HttpStatus.NOT_FOUND).body("404. Entity not found");
+       // }
     }
 
     @Override

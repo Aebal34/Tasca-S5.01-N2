@@ -96,8 +96,9 @@ public class FlowerController {
             @ApiResponse(responseCode = "404", description = "Flower not found.",
                     content = @Content)
     })
+
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> delete(@RequestParam Integer id){
+    public ResponseEntity<String> delete(@PathVariable("id") Integer id){
 
         return flowerService.delete(id);
     }
